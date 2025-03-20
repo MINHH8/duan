@@ -60,6 +60,21 @@ a{
     margin-right: auto;
     max-width: calc(100% - 48px);
 }
+
+.line-clamp{
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.line-clamp.lin-2{
+    --line-clamp: 2;
+}
+
+.break-all{
+    word-break: break-all;
+}
 /*  ===========header=======*/
 .header{
     background: #fffcf4;
@@ -323,6 +338,7 @@ a{
     color: #fff;
 }
 .popular .course-list{
+    flex:1;
     display: flex;
     gap: 30px;
     margin-top: 55px;
