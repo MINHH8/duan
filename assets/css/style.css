@@ -427,8 +427,23 @@ a{
     background: #2e2100;
 }
 
+.feedback-list{
+    display: flex;
+    overflow: hidden; /*visible: nội dung tràn ra ngoài không bị cắt 
+    hidden: nội dung tràn ra ngoài bị ẩn đi
+    scroll: luôn hiển thị thanh cuộn (dù có tràn hay không)*/
+}
 .feedback-item{
     display: flex;
+    flex-shrink: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    /*transition: [property] [duration] [timing-function] [delay];
+        property	Thuộc tính CSS áp dụng hiệu ứng (màu sắc, kích thước, opacity,...).
+        duration	Thời gian diễn ra hiệu ứng (giây s hoặc mili giây ms).
+        timing-function	Hàm điều phối tốc độ (ease, linear, ease-in-out,...).
+        delay	Độ trễ trước khi hiệu ứng bắt đầu
+        */
 }
 
 .feedback-item .avatar{
